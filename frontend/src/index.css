@@ -1,0 +1,69 @@
+main {
+  min-height: 80vh;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h1 {
+  font-size: 1.5rem;
+  padding: 0.1rem;
+}
+.rating span {
+  margin: 0.1rem;
+}
+
+.create-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.submit-btn {
+  margin-left: 15px;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+}
+.carousel-caption {
+  position: absolute;
+  top: 0;
+}
+
+.carousel-caption h2 {
+  color: #fff;
+}
+
+.carousel img {
+  height: 300px;
+  padding: 30px;
+  /* margin: 40px; */
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel a {
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .carousel-caption h2 {
+    font-size: 3vw;
+  }
+  .carousel img {
+    height: 120px;
+    padding: 35px;
+    margin-left: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
