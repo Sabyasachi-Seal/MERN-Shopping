@@ -1,58 +1,58 @@
-import React from 'react'
-import { Route } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import { LinkContainer } from 'react-router-bootstrap'
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
-import SearchBox from './SearchBox'
-import { logout } from '../actions/userActions'
+import React from "react";
+import { Route } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { LinkContainer } from "react-router-bootstrap";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import SearchBox from "./SearchBox";
+import { logout } from "../actions/userActions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faGithub,
-  } from "@fortawesome/free-brands-svg-icons"; 
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const userLogin = useSelector((state) => state.userLogin)
-  const { userInfo } = userLogin
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
 
   const logoutHandler = () => {
-    dispatch(logout())
-  }
+    dispatch(logout());
+  };
 
   return (
     <header>
-      <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
+      <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
         <Container>
-
-          <LinkContainer to='/'>
+          <LinkContainer to="/">
             <Nav.Link>
-              <div className='header_logo'>
-                <img src={faGithub}
-                width="65" height="65"/>
-            </div>
+              <div className="header_logo">
+                <FontAwesomeIcon icon={faGithub} size="2x" />
+              </div>
             </Nav.Link>
           </LinkContainer>
 
-          <Navbar.Toggle aria-controls='basic-navbar-nav' />
-          <Navbar.Collapse id='basic-navbar-nav'>
-          <Route render={({ history }) => <SearchBox history={history} />} />
-            <Nav className='ms-auto'>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Route render={({ history }) => <SearchBox history={history} />} />
+            <Nav className="ms-auto">
+              <div className="header-social-container">
+                <a
+                  href="https://github.com/Sabyasachi-Seal/MERN-Shopping"
+                  className="github_header social"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={faCode} />
+                </a>
+              </div>
 
-            <div className="header-social-container">
-                    <a href="https://github.com/Sabyasachi-Seal/MERN-Shopping" className="github_header social" target="_blank">
-                      <FontAwesomeIcon icon={faGithub} size="2x" />
-                    </a>
-                  </div> 
-
-              <LinkContainer to='/cart'>
+              <LinkContainer to="/cart">
                 <Nav.Link>
-                  <i className='fas fa-shopping-cart'></i> Shopping cart
+                  <i className="fas fa-shopping-cart"></i> Shopping cart
                 </Nav.Link>
               </LinkContainer>
               {userInfo ? (
-                <NavDropdown title={userInfo.name} id='username'>
-                  <LinkContainer to='/profile'>
+                <NavDropdown title={userInfo.name} id="username">
+                  <LinkContainer to="/profile">
                     <NavDropdown.Item>Profile</NavDropdown.Item>
                   </LinkContainer>
                   <NavDropdown.Item onClick={logoutHandler}>
@@ -60,21 +60,21 @@ const Header = () => {
                   </NavDropdown.Item>
                 </NavDropdown>
               ) : (
-                <LinkContainer to='/login'>
+                <LinkContainer to="/login">
                   <Nav.Link>
-                    <i className='fas fa-user'></i> Login
+                    <i className="fas fa-user"></i> Login
                   </Nav.Link>
                 </LinkContainer>
               )}
               {userInfo && userInfo.isAdmin && (
-                <NavDropdown title='Admin' id='adminmenu'>
-                  <LinkContainer to='/admin/userlist'>
+                <NavDropdown title="Admin" id="adminmenu">
+                  <LinkContainer to="/admin/userlist">
                     <NavDropdown.Item>Users</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/admin/productlist'>
+                  <LinkContainer to="/admin/productlist">
                     <NavDropdown.Item>Products</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/admin/orderlist'>
+                  <LinkContainer to="/admin/orderlist">
                     <NavDropdown.Item>Orders</NavDropdown.Item>
                   </LinkContainer>
                 </NavDropdown>
@@ -84,7 +84,7 @@ const Header = () => {
         </Container>
       </Navbar>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
