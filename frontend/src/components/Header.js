@@ -5,7 +5,6 @@ import { LinkContainer } from 'react-router-bootstrap'
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
 import SearchBox from './SearchBox'
 import { logout } from '../actions/userActions'
-import stunninglogo from '../images/logo.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faGithub,
@@ -29,7 +28,7 @@ const Header = () => {
           <LinkContainer to='/'>
             <Nav.Link>
               <div className='header_logo'>
-                <img src={stunninglogo}
+                <img src={faGithub}
                 width="65" height="65"/>
             </div>
             </Nav.Link>
@@ -41,7 +40,7 @@ const Header = () => {
             <Nav className='ms-auto'>
 
             <div className="header-social-container">
-                    <a href="https://github.com/Dev-jr-8/stunning-spark" className="github_header social" target="_blank">
+                    <a href="https://github.com/Sabyasachi-Seal/MERN-Shopping" className="github_header social" target="_blank">
                       <FontAwesomeIcon icon={faGithub} size="2x" />
                     </a>
                   </div> 

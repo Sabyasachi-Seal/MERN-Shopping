@@ -61,7 +61,7 @@ const createProduct = asyncHandler(async (req, res) => {
     name: 'Sample name',
     price: 0,
     user: req.user._id,
-    image: 'E:\Projects\stunning-sprak\frontend\public\images\sample-image.jpg',
+    image: '',
     brand: 'Sample brand',
     category: 'Sample category',
     countInStock: 0,

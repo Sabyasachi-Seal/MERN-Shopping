@@ -1,5 +1,5 @@
 {
-  "name": "stunning-sprak",
+  "name": "MERN-Shopping",
   "version": "1.0.0",
   "description": "An E-commerce website based on MERN Stack",
   "main": "server.js",
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dev-jr-8/stunning-sprak.git"
+    "url": "git+https://github.com/Sabyasachi-Seal/MERN-Shopping.git"
   },
-  "author": "dev-jr-8",
+  "author": "Sabyasachi-Seal",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Dev-jr-8/stunning-sprak/issues"
+    "url": "https://github.com/Sabyasachi-Seal/MERN-Shopping/issues"
   },
-  "homepage": "https://github.com/Dev-jr-8/stunning-sprak#readme",
+  "homepage": "https://github.com/Sabyasachi-Seal/MERN-Shopping#readme",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-brands-svg-icons": "^6.3.0",
