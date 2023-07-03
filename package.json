@@ -1,34 +1,56 @@
 {
-  "name": "team-seal",
+  "name": "stunning-sprak",
   "version": "1.0.0",
+  "description": "An E-commerce website based on MERN Stack",
   "main": "server.js",
-  "repository": "https://github.com/Sabyasachi-Seal/MERN-Shopping",
   "type": "module",
   "scripts": {
     "start": "node backend/server",
-    "server": " nodemon backend/server",
-    "client": "npm start --prefix frontend",
+    "server": "nodemon backend/server",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node backend/seeder",
-    "data: destroy": "node backend/seeder -d",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "data:destroy": "node backend/seeder -d",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
+    "build": "npm install"
   },
-  "author": "Seal, Nikita, Nandi, Saugata, Anuran, Arijit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-jr-8/stunning-sprak.git"
+  },
+  "author": "dev-jr-8",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dev-jr-8/stunning-sprak/issues"
+  },
+  "homepage": "https://github.com/Dev-jr-8/stunning-sprak#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-brands-svg-icons": "^6.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@material-ui/core": "^4.12.4",
+    "@react-oauth/google": "^0.5.0",
     "bcryptjs": "^2.4.3",
+    "cdbreact": "^1.5.8",
     "colors": "^1.4.0",
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1",
+    "concurrently": "^7.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.5.2",
+    "mongoose": "^6.6.5",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
-    "react-paypal-button-v2": "^2.6.3"
-  },
-  "devDependencies": {
-    "concurrently": "^7.3.0",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.20",
+    "path": "^0.12.7",
+    "react-google-login": "^5.2.2",
+    "react-helmet": "^6.1.0",
+    "react-paypal-button-v2": "^2.6.3",
+    "react-responsive-modal": "^6.4.1",
+    "react-tooltip": "^5.8.3",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.1",
+    "styled-components": "^5.3.6"
   }
 }

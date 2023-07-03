@@ -1,69 +1,61 @@
-import React from "react";
-import "./bootstrap.min.css";
-import { Container } from "react-bootstrap";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import HomeScreen from "./Pages/HomeScreen";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ProductScreen from "./Pages/ProductScreen";
-import CartScreen from "./Pages/CartScreen";
-import LoginScreen from "./Pages/LoginScreen";
-import RegisterScreen from "./Pages/RegisterScreen";
-import ProfileScreen from "./Pages/ProfileScreen";
-import PaymentScreen from "./Pages/PaymentScreen";
-import PlaceOrderScreen from "./Pages/PlaceOrderScreen";
-import OrderScreen from "./Pages/OrderScreen";
-import UserListScreen from "./Pages/UserListScreen";
-import UserEditScreen from "./Pages/UserEditScreen";
-import ProductListScreen from "./Pages/ProductListScreen";
-import ShippingScreen from "./Pages/ShippingScreen";
-import ProductEditScreen from "./Pages/ProductEditScreen";
-import OrderListScreen from "./Pages/OrderListScreen";
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import {Container} from 'react-bootstrap';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HomeScreen from './screens/HomeScreen';
+import ProductScreen from './screens/ProductScreen';
+import CartScreen from './screens/cartScreen';
+import RegisterScreen from './screens/RegisterScreen'
+import LoginScreen from './screens/loginScreen';
+import ProfileScreen from './screens/ProfileScreen'
+import ShippingScreen from './screens/ShippingScreen'
+import PaymentScreen from './screens/PaymentScreen'
+import PlaceOrderScreen from './screens/PlaceOrderScreen'
+import OrderScreen from './screens/OrderScreen'
+import UserListScreen from './screens/UserListScreen'
+import UserEditScreen from './screens/UserEditScreen'
+import ProductListScreen from './screens/ProductListScreen'
+import ProductEditScreen from './screens/ProductEditScreen'
+import OrderListScreen from './screens/OrderListScreen'
 
-function App() {
+const App =() => {
   return (
     <Router>
       <Header />
-      <main className="py-3">
+      <main className='py-3'>
         <Container>
-          <Routes>
-            <Route path="/" element={<HomeScreen />} />
-            <Route path="/signIn" element={<LoginScreen />} />
-            <Route path="/register" element={<RegisterScreen />} />
-            <Route path="/profile" element={<ProfileScreen />} />
-            <Route path="/payment" element={<PaymentScreen />} />
-            <Route path="/order/:id" element={<OrderScreen />} />
-            <Route path="/admin/users" element={<UserListScreen />} />
-            <Route path="/admin/orders" element={<OrderListScreen />} />
-            <Route path="/shipping" element={<ShippingScreen />} />
-            <Route
-              path="/admin/products"
-              element={<ProductListScreen />}
-              exact
-            />
-            <Route
-              path="/admin/products/:pageNumber"
-              element={<ProductListScreen />}
-              exact
-            />
-            <Route path="/placeorder" element={<PlaceOrderScreen />} />
-            <Route path="/product/:id" element={<ProductScreen />} />
-            <Route path="/search/:keyword" element={<HomeScreen />} exact />
-            <Route path="/page/:pageNumber" element={<HomeScreen />} />
-            <Route
-              path="/search/:keyword/page/:pageNumber"
-              element={<HomeScreen />}
-            />
-            <Route path="/user/:id/edit" element={<UserEditScreen />} />
-            <Route
-              path="/admin/product/:id/edit"
-              element={<ProductEditScreen />}
-            />
-            <Route path="cart">
-              <Route index element={<CartScreen />} />
-              <Route path=":id" element={<CartScreen />} />
-            </Route>
-          </Routes>
+        <Route path='/order/:id' component={OrderScreen} exact/>
+          <Route path='/shipping' component={ShippingScreen} exact/>
+          <Route path='/payment' component={PaymentScreen} exact/>
+          <Route path='/placeorder' component={PlaceOrderScreen} exact/>
+          <Route path='/login' component={LoginScreen} exact/>
+          <Route path='/register' component={RegisterScreen} exact/>
+          <Route path='/profile' component={ProfileScreen} exact/>
+          <Route path='/product/:id' component={ProductScreen} exact/>
+          <Route path='/cart/:id?' component={CartScreen} exact/>
+          <Route path='/admin/userlist' component={UserListScreen} exact/>
+          <Route path='/admin/user/:id/edit' component={UserEditScreen} exact/>
+          <Route
+            path='/admin/productlist'
+            component={ProductListScreen}
+            exact
+          />
+          <Route
+            path='/admin/productlist/:pageNumber'
+            component={ProductListScreen}
+            exact
+          />
+          <Route path='/admin/product/:id/edit' component={ProductEditScreen} exact/>
+          <Route path='/admin/orderlist' component={OrderListScreen} exact/>
+          <Route path='/search/:keyword' component={HomeScreen} exact />
+          <Route path='/page/:pageNumber' component={HomeScreen} exact />
+          <Route
+            path='/search/:keyword/page/:pageNumber'
+            component={HomeScreen}
+            exact
+          />
+          <Route path='/' component={HomeScreen} exact/>
         </Container>
       </main>
       <Footer />

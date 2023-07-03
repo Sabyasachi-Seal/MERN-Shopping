@@ -1,16 +1,13 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from 'react'
+import SocialFollow from './SocialLink'
 
 const Footer = () => {
   return (
-    <footer>
-      <Container className="text-center py-3">
-        <Row>
-          <Col>Copyright@ PrepShop</Col>
-        </Row>
-      </Container>
+    <footer className="footer">
+      <SocialFollow />
     </footer>
-  );
-};
+    
+  )
+}
 
-export default Footer;
+export default Footer
