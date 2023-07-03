@@ -118,5 +118,6 @@ npm run data:import
 ## Support
 
 - Support us by, ⭐ this repository. It helps.
-
+- Made with ❤️ and care....
+- Seal, Nikita, Nandi, Anuran, Arijit
 
