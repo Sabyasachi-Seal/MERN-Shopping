@@ -51,5 +51,11 @@
   },
   "devDependencies": {
     "redux-devtools-extension": "^2.13.9"
+  },
+  "engines": {
+    "npm": ">=17.7.0"
+  },
+  "overrides": {
+    "react": "$react"
   }
 }
