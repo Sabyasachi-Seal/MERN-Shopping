@@ -119,5 +119,5 @@ npm run data:import
 
 - Support us by, ⭐ this repository. It helps.
 - Made with ❤️ and care....
-- Seal, Nikita, Nandi, Anuran, Arijit
+- Nikita Singh, Sabyasachi Seal, Anurag Nandi, Anuran Namhata, Arijit Ghosh
 
