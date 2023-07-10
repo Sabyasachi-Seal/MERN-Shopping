@@ -33,7 +33,7 @@ export default function SocialFollow() {
       </p>  
 
         <p className="col-sm">
-          &copy;{new Date().getFullYear()} <a href="https://sabyasachi-seal.github.io" className="footer_name social" target="_blank" >Seal, Nikita, Nandi, Anuran, Arijit</a> 
+          &copy;{new Date().getFullYear()} <a href="https://sabyasachi-seal.github.io" className="footer_name social" target="_blank" >Nikita Singh, Sabyasachi Seal, Anurag Nandi, Anuran Namhata, Arijit Ghosh, Saugata Das</a> 
           Made with ❤️ and care....
         </p>
         

@@ -51,7 +51,7 @@ if (process.env.NODE_ENV === 'production') {
   )
 } else {
   app.get('/', (req, res) => {
-    res.send('Kudumbangal Kondadum Server is live')
+    res.send('Hari Om Kiki Server is live')
   })
 }  
 
